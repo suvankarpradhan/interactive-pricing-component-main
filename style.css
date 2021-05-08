@@ -66,8 +66,8 @@ input[type="range"] {
   border-radius: 5px;
   background: linear-gradient(
     90deg,
-    hsl(174, 77%, 80%) 60%,
-    hsl(224, 65%, 95%) 40%
+    hsl(174, 77%, 80%) 59%,
+    hsl(224, 65%, 95%) 41%
   );
 }
 input[type="range"]::-webkit-slider-thumb {
@@ -75,7 +75,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: url("images/icon-slider.svg") no-repeat, hsl(174, 86%, 45%);
+  background: url("images/icon-slider.svg") no-repeat, hsl(174, 77%, 60%);
   background-position: center;
   background-size: 60%;
 }
@@ -83,32 +83,93 @@ input[type="range"]::-webkit-slider-thumb:hover {
   box-shadow: 0px 12px 25px 5px hsl(174, 77%, 80%);
 }
 input[type="range"]::-webkit-slider-thumb:active {
+  background-color: hsl(174, 86%, 45%);
   box-shadow: 0px 12px 25px 10px hsl(174, 77%, 80%);
 }
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 3% 6% 6%;
+}
+.card-body p {
+  color: hsl(225, 20%, 60%);
+  font-size: 13px;
+  font-weight: 600;
+}
+#offer {
+  width: 47%;
+}
+#offer::after {
+  content: "25% discount";
+  padding: 0% 3%;
+  margin-left: 2%;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  border-radius: 25px;
+}
 input[type="checkbox"] {
+  -webkit-appearance: none;
   height: 20px;
   width: 40px;
-  background-color: lightgray;
+  background-color: hsl(223, 50%, 87%);
   border-radius: 34px;
-  -webkit-appearance: none;
-  box-shadow: 0px 0px 3px 0px gray inset;
+  border: none;
   cursor: pointer;
+  margin: 0% 3%;
 }
 input:checked[type="checkbox"] {
-  background-color: blueviolet;
+  background-color: hsl(174, 86%, 45%);
 }
 input[type="checkbox"]::before {
   content: "";
-  transform: scale(1.1);
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   background-color: white;
   position: absolute;
   border-radius: 50%;
   transition: 0.5s;
+  transform: translate(2px, 2px);
 }
 input:checked[type="checkbox"]::before {
-  transform: translateX(20px);
+  transform: translate(20px, 2px);
+}
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  padding: 6%;
+  border-top: 1px solid hsl(224, 65%, 95%);
+}
+.foot-item1,
+.foot-item2 {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+}
+.foot-item1 li {
+  list-style: none;
+  font-size: 12px;
+  padding: 2px;
+  color: hsl(225, 20%, 60%);
+}
+.foot-item1 img {
+  padding-right: 3%;
+}
+.foot-item2 {
+  justify-content: center;
+  align-items: flex-end;
+}
+.foot-item2 button {
+  padding: 2%;
+  height: 35px;
+  width: 135px;
+  border: none;
+  border-radius: 25px;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+}
+.foot-item2 button:hover {
+  color: hsl(0, 0%, 100%);
 }
 .attribution {
   font-size: 11px;
