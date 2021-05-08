@@ -9,12 +9,19 @@ body {
   background: url("images/bg-pattern.svg") no-repeat, hsl(230, 100%, 99%);
   background-size: contain;
   background-position: top;
+  background-attachment: fixed;
   font-family: "Manrope", sans-serif;
 }
 .page-title {
   margin: 5% 30% 0%;
   text-align: center;
   padding: 3%;
+}
+.page-title img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -24%);
+  z-index: -1;
 }
 .page-title h2 {
   color: hsl(227, 35%, 25%);
@@ -46,6 +53,17 @@ body {
 .item1 p {
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.item2 {
+  display: block;
+}
+.item3 {
+  display: none;
+  text-align: center;
+  padding: 3% 6%;
+  color: hsl(225, 20%, 60%);
+  font-size: 14px;
+  font-weight: 600;
 }
 #price {
   font-size: 35px;
@@ -177,4 +195,73 @@ input:checked[type="checkbox"]::before {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 1100px) {
+  #offer::after {
+    content: "-25%";
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card-header {
+    padding: 8% 6% 6%;
+    justify-content: center;
+  }
+  .item2 {
+    display: none;
+  }
+  .item3 {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    background-position: top left;
+    background-size: 200%;
+  }
+  .page-title {
+    margin: 5% 24% 0%;
+  }
+  .card {
+    margin: 2% 24% 5%;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    background-size: 250%;
+  }
+  .page-title {
+    margin: 25% 5% 5%;
+  }
+  .card {
+    margin: 2% 5%;
+  }
+  .card-footer {
+    flex-direction: column;
+  }
+  .foot-item1,
+  .foot-item2 {
+    flex: 100%;
+  }
+  .foot-item1 {
+    text-align: center;
+  }
+  .foot-item2 {
+    padding: 6%;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    background-size: 400%;
+  }
+  .page-title img {
+    transform: translate(-50%, -10%);
+  }
+  .page-title h2 {
+    font-size: 20px;
+  }
+  .page-title p {
+    padding: 3% 15%;
+  }
 }
