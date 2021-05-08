@@ -65,7 +65,7 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
-#price {
+.price {
   font-size: 35px;
   font-weight: 800;
   color: hsl(227, 35%, 25%);
